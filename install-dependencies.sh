@@ -14,9 +14,9 @@ sudo apt-get install -y --no-install-recommends \
 
 echo "==> Installing JetBrainsMono Nerd Font"
 mkdir -p "$HOME/.local/share/fonts"
-cp ./font/JetBrainsMono.7z /tmp
+sudo cp ./font/JetBrainsMono.7z /tmp
 cd /tmp
-rm -rf JetBrainsMonoNerd
+sudo rm -rf JetBrainsMonoNerd
 7z x JetBrainsMono.7z -oJetBrainsMonoNerd >/dev/null
 mv JetBrainsMonoNerd/*.ttf "$HOME/.local/share/fonts/"
 fc-cache -fv
