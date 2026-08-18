@@ -180,12 +180,11 @@ copy-region-to-clipboard() {
 }
 
 zle -N copy-region-to-clipboard
+# Ctrl+Shift+C
+bindkey '^[[100~' copy-region-to-clipboard
 
 bindkey '^[[1;6D' power-select-left
 bindkey '^[[1;6C' power-select-right
-
-# Ctrl+Shift+C
-bindkey '^[[100~' copy-region-to-clipboard
 
 # ===================
 # starship init
