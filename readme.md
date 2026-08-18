@@ -84,6 +84,8 @@ The shell includes a custom function named `copy-region-to-clipboard` that:
 - sends it to Wayland clipboard using `wl-copy`
 - deactivates the selection
 
+![](readme_20260817232933183.png)
+
 This is useful for working in a GUI environment with terminal selection and clipboard integration.
 
 ### Completion system
@@ -100,8 +102,8 @@ This improves shell completion usability.
 
 At the end of the file, the shell initializes Starship with:
 
-```zsh
-eval "$(starship init zsh)"
+```
+eval zsh "$(starship init zsh)"
 ```
 
 This loads the custom prompt configured in `starship.toml`.
@@ -141,6 +143,8 @@ The config also supports selecting text by word:
 - `Ctrl + Shift + Left`
 - `Ctrl + Shift + Right`
 
+![](readme_20260817232933183.png)
+
 This integrates with Zsh selection behavior to make command editing feel closer to GUI editors.
 
 ### Delete-word shortcuts
@@ -176,6 +180,8 @@ The prompt is designed as a two-line display:
 
 - first line: current system context, environment, and active project info
 - second line: time, status, and final prompt character
+
+![](readme_20260817233132683.png)
 
 This gives a dense but informative view of the shell state at a glance.
 
