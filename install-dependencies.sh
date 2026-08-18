@@ -5,7 +5,8 @@ echo "==> Updating package list"
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
   curl \
-  unzip \
+  p7zip-full \
+  p7zip-rar \ 
   fontconfig \
   wget \
   ca-certificates \
@@ -13,10 +14,10 @@ sudo apt-get install -y --no-install-recommends \
 
 echo "==> Installing JetBrainsMono Nerd Font"
 mkdir -p "$HOME/.local/share/fonts"
-cp ./font/JetBrainsMono.zip /tmp
+cp ./font/JetBrainsMono.7z /tmp
 cd /tmp
 rm -rf JetBrainsMonoNerd
-unzip -o JetBrainsMono.zip -d JetBrainsMonoNerd >/dev/null
+7z -o JetBrainsMono.7z -d JetBrainsMonoNerd >/dev/null
 mv JetBrainsMonoNerd/*.ttf "$HOME/.local/share/fonts/"
 fc-cache -fv
 
