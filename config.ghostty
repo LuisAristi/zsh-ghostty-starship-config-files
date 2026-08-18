@@ -1,0 +1,58 @@
+# ============================================================
+# Ghostty
+# PowerShell-like keyboard editing for Zsh/ZLE
+# ============================================================
+
+# Appearance
+font-family = JetBrainsMono NF Medium
+font-size = 14
+cursor-style = block
+
+# ============================================================
+# WORD NAVIGATION
+# ============================================================
+
+# Ctrl + Left
+# Send: ESC [ 1 ; 5 D
+keybind = ctrl+left=csi:1;5D
+
+# Ctrl + Right
+# Send: ESC [ 1 ; 5 C
+keybind = ctrl+right=csi:1;5C
+
+# ============================================================
+# WORD SELECTION
+# ============================================================
+
+# Ctrl + Shift + Left
+# Modifier 6 = Ctrl + Shift
+keybind = ctrl+shift+left=csi:1;6D
+
+# Ctrl + Shift + Right
+keybind = ctrl+shift+right=csi:1;6C
+
+# ============================================================
+# DELETE WORD
+# ============================================================
+
+# Ctrl + Backspace
+# Custom sequence: ESC [ 99 ~
+keybind = ctrl+backspace=csi:99~
+
+# Ctrl + Delete
+# Custom sequence: ESC [ 98 ~
+keybind = ctrl+delete=csi:98~
+
+# ============================================================
+# OPTIONAL: RELOAD CONFIG
+# ============================================================
+
+# Ghostty already has Ctrl+Shift+, by default.
+
+# ============================================================
+# copy and paste
+# ============================================================
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+keybind = ctrl+shift+c=csi:100~
