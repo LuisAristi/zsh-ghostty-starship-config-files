@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
   curl \
   p7zip-full \
-  p7zip-rar \ 
+  p7zip-rar \
   fontconfig \
   wget \
   ca-certificates \
@@ -17,7 +17,7 @@ mkdir -p "$HOME/.local/share/fonts"
 cp ./font/JetBrainsMono.7z /tmp
 cd /tmp
 rm -rf JetBrainsMonoNerd
-7z -o JetBrainsMono.7z -d JetBrainsMonoNerd >/dev/null
+7z x JetBrainsMono.zip -oJetBrainsMonoNerd >/dev/null
 mv JetBrainsMonoNerd/*.ttf "$HOME/.local/share/fonts/"
 fc-cache -fv
 
