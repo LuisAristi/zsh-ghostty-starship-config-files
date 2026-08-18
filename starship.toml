@@ -13,8 +13,8 @@
 # ------------------------------------------------------------
 
 format = """
-[┌─>](bold overlay0)$memory_usage$battery$jobs$cmd_duration
-[│](bold overlay0)$sudo$username$hostname$localip$shlvl$singularity$kubernetes$directory$vcsh$fossil_branch$fossil_metrics$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$pijul_channel$docker_context$package$nodejs$c$cpp$rust$golang$php$java$kotlin$haskell$scala$elixir$elm$erlang$gleam$lua$ruby$swift$zig$dart$dotnet$deno$bun$julia$crystal$purescript$vlang$nim$conda$pixi$meson$cmake$daml$terraform$vagrant$aws$gcloud$azure$openstack$direnv$env_var$crystal$custom
+[┌─>](bold overlay0)$memory_usage$battery$jobs$cmd_duration$sudo
+[│](bold overlay0)$username$hostname$localip$shlvl$singularity$kubernetes$directory$vcsh$fossil_branch$fossil_metrics$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$pijul_channel$docker_context$package$nodejs$c$cpp$rust$golang$php$java$kotlin$haskell$scala$elixir$elm$erlang$gleam$lua$ruby$swift$zig$dart$dotnet$deno$bun$julia$crystal$purescript$vlang$nim$conda$pixi$meson$cmake$daml$terraform$vagrant$aws$gcloud$azure$openstack$direnv$env_var$crystal$custom
 [└─](bold overlay0)$time$status$character"""
 
 right_format = ""
@@ -54,7 +54,7 @@ base      = "#000000"
 
 [sudo]
 disabled = false
-symbol = "\uf21b "
+symbol = "\uf023 "
 format = "[$symbol]($style)"
 style = "bold red"
 
