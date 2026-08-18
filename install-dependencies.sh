@@ -17,19 +17,15 @@ mkdir -p "$HOME/.local/share/fonts"
 cp ./font/JetBrainsMono.7z /tmp
 cd /tmp
 rm -rf JetBrainsMonoNerd
-7z x JetBrainsMono.zip -oJetBrainsMonoNerd >/dev/null
+7z x JetBrainsMono.7z -oJetBrainsMonoNerd >/dev/null
 mv JetBrainsMonoNerd/*.ttf "$HOME/.local/share/fonts/"
 fc-cache -fv
 
 echo "==> Installing zsh from apt"
 sudo apt-get install -y --no-install-recommends zsh
 
-echo "==> Installing ghostty from apt"
-if ! command -v ghostty >/dev/null 2>&1; then
-  sudo add-apt-repository -y ppa:apricot/ghostty
-  sudo apt-get update
-fi
-sudo apt-get install -y --no-install-recommends ghostty
+echo "==> Installing ghostty from github"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
 
 echo "==> Installing starship"
 curl -sS https://starship.rs/install.sh | sh
@@ -40,5 +36,4 @@ command -v ghostty
 command -v starship
 fc-match "JetBrainsMono Nerd Font" | head -n 1
 
-./export-files.sh
 echo "==> Installation complete"
